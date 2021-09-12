@@ -28,7 +28,7 @@
   <component name="RunManager">
     <configuration name="Newton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.functions.Newton" />
-      <module name="INFO6205" />
+      <module name="INFO-6205" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="edu.neu.coe.info6205.functions.*" />
@@ -54,6 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1631417504633</updated>
       <workItem from="1631417506182" duration="2161000" />
+      <workItem from="1631420358708" duration="44000" />
     </task>
     <servers />
   </component>
