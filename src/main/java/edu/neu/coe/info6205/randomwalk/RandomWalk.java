@@ -21,6 +21,13 @@ public class RandomWalk {
      */
     private void move(int dx, int dy) {
         // TO BE IMPLEMENTED
+        // First, we need to know that x is the accumulation of dx.
+        // And y is just the accumulation of dy
+
+        x += dx;
+        y += dy;
+
+        // I think that should be it?
     }
 
     /**
@@ -30,6 +37,13 @@ public class RandomWalk {
      */
     private void randomWalk(int m) {
         // TO BE IMPLEMENTED
+        // So we will have m iterations.
+        for (int i = 0; i < m; i++){
+            // Then we call out the randomMove I reckon?
+            // Otherwise it is gonna be a clusterfuck.
+            randomMove();
+        }
+
     }
 
     /**
@@ -49,7 +63,14 @@ public class RandomWalk {
      */
     public double distance() {
         // TO BE IMPLEMENTED
-        return 0;
+
+        // Now we calculate the thing as:
+        double dist_temp = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+
+        //return 0;
+        // Instead of returning 0.
+        return dist_temp;
+
     }
 
     /**
