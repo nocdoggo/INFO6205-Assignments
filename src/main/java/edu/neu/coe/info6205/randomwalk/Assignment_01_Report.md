@@ -39,4 +39,7 @@ $D^{2} \ = \ P_{x} D_{x}^{2} \ + \ P_{y}D_{y}^{2} \ = \ \frac{1}{2} \times n \ +
 
 To simply put, the expression of $D$ can be expressed as:
 
-$D \ = \ sqrt(n) \ as \ n \rightarrow \infin $.
+$D \ = \ \sqrt[]{n} \ as \ n \rightarrow \infin $.
+
+
+
