@@ -1,4 +1,16 @@
-## Assignment 1
+### `Noctis Yamazaki Zhang  (NUID: 002105657)          `
+
+# INFO 6205 Program Structures & Algorithms [Fall 2021]
+
+## Assignment 1 (Random Walk)
+
+### 1. Your **conclusion** about the relationship between $d$ and $n$
+
+$D \ = \ \sqrt[]{n} \ particularly \ when \ n \rightarrow \infin $.
+
+### Your **evidence** to support that relationship
+
+ 
 
 When it comes to the random walk question, per the statement, the man has the ability to walk with a unit length of 1 in a 2-Dimensional space. (Unless he can fly with a rocket launcher I reckon?) Therefore, the distance $D$ shall consists of horizontal (Let's say, from the west to the east in this case.) component, plus the vertical (Evidently, it would be from the south to the north in this case.) component. We denote that $x_{i}$ represents the length of the horizontal component, and $y_{i}$ represents the vertical component.  Therefore, the distance $D$ can be expressed as:
 
@@ -39,7 +51,7 @@ $D^{2} \ = \ P_{x} D_{x}^{2} \ + \ P_{y}D_{y}^{2} \ = \ \frac{1}{2} \times n \ +
 
 To simply put, the expression of $D$ can be expressed as:
 
-$D \ = \ \sqrt[]{n} \ as \ n \rightarrow \infin $.
+$D \ = \ \sqrt[]{n} \ particularly \ when \ n \rightarrow \infin $.
 
 
 
