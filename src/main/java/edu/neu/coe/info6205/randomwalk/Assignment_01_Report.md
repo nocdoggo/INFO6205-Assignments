@@ -8,9 +8,11 @@
 
 $D \ = \ \sqrt[]{n} \ particularly \ when \ n \rightarrow \infin $.
 
-### Your **evidence** to support that relationship
+### 2. Your **evidence** to support that relationship
 
- 
+ The result can be seen as:
+
+![ResultTable](ResultTable.PNG)
 
 When it comes to the random walk question, per the statement, the man has the ability to walk with a unit length of 1 in a 2-Dimensional space. (Unless he can fly with a rocket launcher I reckon?) Therefore, the distance $D$ shall consists of horizontal (Let's say, from the west to the east in this case.) component, plus the vertical (Evidently, it would be from the south to the north in this case.) component. We denote that $x_{i}$ represents the length of the horizontal component, and $y_{i}$ represents the vertical component.  Therefore, the distance $D$ can be expressed as:
 
@@ -53,5 +55,97 @@ To simply put, the expression of $D$ can be expressed as:
 
 $D \ = \ \sqrt[]{n} \ particularly \ when \ n \rightarrow \infin $.
 
+### 3. Your **code** (RandomWalk.java plus anything else that you changed or created)
 
+In `RandomWalk.java`:
+
+The following code is added:
+
+```java
+    /**
+     * Private method to move the current position, that's to say the drunkard moves
+     *
+     * @param dx the distance he moves in the x direction
+     * @param dy the distance he moves in the y direction
+     */
+    private void move(int dx, int dy) {
+        // TO BE IMPLEMENTED
+        // First, we need to know that x is the accumulation of dx.
+        // And y is just the accumulation of dy
+
+        x += dx;
+        y += dy;
+
+        // I think that should be it?
+    }
+```
+
+
+
+```java
+    /**
+     * Perform a random walk of m steps
+     *
+     * @param m the number of steps the drunkard takes
+     */
+    private void randomWalk(int m) {
+        // TO BE IMPLEMENTED
+        // So we will have m iterations.
+        for (int i = 0; i < m; i++){
+            // Then we call out the randomMove I reckon?
+            // Otherwise it is gonna be a clusterfuck.
+            randomMove();
+        }
+
+    }
+```
+
+
+
+```java
+    /**
+     * Method to compute the distance from the origin (the lamp-post where the drunkard starts) to his current position.
+     *
+     * @return the (Euclidean) distance from the origin to the current position.
+     */
+    public double distance() {
+        // TO BE IMPLEMENTED
+
+        // Now we calculate the thing as:
+        double dist_temp = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+
+        //return 0;
+        // Instead of returning 0.
+        return dist_temp;
+
+    }
+```
+
+This code is used to generate the relationship table for ==Section 2==.
+
+```java
+    public static void main(String[] args) {
+//        if (args.length == 0)
+//            throw new RuntimeException("Syntax: RandomWalk steps [experiments]");
+//        int m = Integer.parseInt(args[0]);
+        int[] m = new int[10];
+        int n = 5000;
+
+        for (int i = 0; i < 10; i++) {
+            // Recycle the same function.
+            m[i] =  (i+1)*(i+1);
+        }
+
+//        if (args.length > 1) n = Integer.parseInt(args[1]);
+        for (int j:m) {
+            double meanDistance = randomWalkMulti(j, n);
+            System.out.println(j + " steps: " + meanDistance + " over " + n + " experiments");
+        }
+
+    }
+```
+
+### 4. A screen shot of the unit tests all passing
+
+![UnitTest](UnitTest.PNG)
 

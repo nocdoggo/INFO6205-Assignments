@@ -6,6 +6,11 @@ package edu.neu.coe.info6205.randomwalk;
 
 import java.util.Random;
 
+// For the testing of generating the relationship table
+import java.io.FileWriter;
+import java.io.IOException;
+
+
 public class RandomWalk {
 
     private int x = 0;
@@ -91,13 +96,23 @@ public class RandomWalk {
     }
 
     public static void main(String[] args) {
-        if (args.length == 0)
-            throw new RuntimeException("Syntax: RandomWalk steps [experiments]");
-        int m = Integer.parseInt(args[0]);
-        int n = 30;
-        if (args.length > 1) n = Integer.parseInt(args[1]);
-        double meanDistance = randomWalkMulti(m, n);
-        System.out.println(m + " steps: " + meanDistance + " over " + n + " experiments");
+//        if (args.length == 0)
+//            throw new RuntimeException("Syntax: RandomWalk steps [experiments]");
+//        int m = Integer.parseInt(args[0]);
+        int[] m = new int[10];
+        int n = 5000;
+
+        for (int i = 0; i < 10; i++) {
+            // Recycle the same function.
+            m[i] =  (i+1)*(i+1);
+        }
+
+//        if (args.length > 1) n = Integer.parseInt(args[1]);
+        for (int j:m) {
+            double meanDistance = randomWalkMulti(j, n);
+            System.out.println(j + " steps: " + meanDistance + " over " + n + " experiments");
+        }
+
     }
 
 }

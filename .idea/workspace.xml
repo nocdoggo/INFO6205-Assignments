@@ -25,8 +25,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="JUnit.RandomWalkTest.testRandomWalk2">
-    <configuration name="RandomWalkTest.testMove1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.RandomWalk">
+    <configuration name="RandomWalk" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.randomwalk.RandomWalk" />
       <module name="INFO-6205" />
       <extension name="coverage">
         <pattern>
@@ -34,15 +35,11 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.randomwalk" />
-      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.randomwalk.RandomWalkTest" />
-      <option name="METHOD_NAME" value="testMove1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RandomWalkTest.testMove2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RandomWalkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="INFO-6205" />
       <extension name="coverage">
         <pattern>
@@ -52,8 +49,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.randomwalk" />
       <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.randomwalk.RandomWalkTest" />
-      <option name="METHOD_NAME" value="testMove2" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,11 +104,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RandomWalk" />
+        <item itemvalue="JUnit.RandomWalkTest" />
         <item itemvalue="JUnit.RandomWalkTest.testRandomWalk2" />
         <item itemvalue="JUnit.RandomWalkTest.testRandomWalk" />
         <item itemvalue="JUnit.RandomWalkTest.testMove3" />
-        <item itemvalue="JUnit.RandomWalkTest.testMove2" />
-        <item itemvalue="JUnit.RandomWalkTest.testMove1" />
       </list>
     </recent_temporary>
   </component>
@@ -127,6 +123,7 @@
       <workItem from="1631417506182" duration="2161000" />
       <workItem from="1631420358708" duration="44000" />
       <workItem from="1631761026365" duration="3204000" />
+      <workItem from="1632105495919" duration="2659000" />
     </task>
     <servers />
   </component>
