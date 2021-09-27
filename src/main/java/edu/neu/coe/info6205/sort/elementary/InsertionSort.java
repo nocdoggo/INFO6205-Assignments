@@ -8,6 +8,13 @@ import edu.neu.coe.info6205.sort.Helper;
 import edu.neu.coe.info6205.sort.SortWithHelper;
 import edu.neu.coe.info6205.util.Config;
 
+
+// Just in case
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class InsertionSort<X extends Comparable<X>> extends SortWithHelper<X> {
 
     /**
@@ -61,12 +68,20 @@ public class InsertionSort<X extends Comparable<X>> extends SortWithHelper<X> {
         // TO BE IMPLEMENTED
 
         // Start the iteration
-        for (int i = 1 + from; i < to; i++) {
+        for (int i = from + 1; i < to; i++) {
 
             int tempIdx = i - 1;
 
             // tempIdx can be 0
-            while (tempIdx > -1 && !helper.less(xs[tempIdx], xs[tempIdx + 1]) ){
+            //while (tempIdx >= from +1){
+            while (tempIdx >= 0 && !helper.less(xs[tempIdx], xs[tempIdx + 1])){
+                // Check condition
+//                if (helper.swapStableConditional(xs, tempIdx)) {
+//                    tempIdx -- ;
+//
+//                } else {
+//                    break;
+//                }
 
                 // Now perform the swap here
 

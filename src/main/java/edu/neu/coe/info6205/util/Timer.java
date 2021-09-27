@@ -57,25 +57,30 @@ public class Timer {
         // TO BE IMPLEMENTED: note that the timer is running when this method is called and should still be running when it returns.
 
         // Initialize a pause before the interation of loops
-        pause();
+        //pause();
+        // Might be wrong
 
         // Then it is safe to start the iteration
-        for (int i = 0; i < 0; i ++) {
+        for (int i = 0; i < n; i ++) {
 
-            // Use T class
+            pause();
+
+            // Use T class trigger get
             T tt = supplier.get();
+            resume();
 
             // check if not null
             if (preFunction != null) {
 
+                pause();
+
                 // Apply tt
 
                 preFunction.apply(tt);
+                resume();
 
             }
 
-            // Continue
-            resume();
 
             U uu = function.apply(tt);
 
@@ -84,12 +89,19 @@ public class Timer {
 
             // Essentially time to stop here
             if (postFunction != null) {
+                pause();
                 postFunction.accept(uu);
+                resume();
             }
 
         }
 
-        return meanLapTime();
+        pause();
+
+        double finalt = meanLapTime();
+
+        resume();
+        return finalt;
 
 
         //return 0;
@@ -227,7 +239,9 @@ public class Timer {
     private static double toMillisecs(long ticks) {
         // TO BE IMPLEMENTED
 
-        return ((double) ticks / 1000000);
+        //return ((double) ticks / 1000000);
+
+        return (Math.max(0L, Math.round(ticks / 1000000.0d)));
 
         // return 0;
     }
