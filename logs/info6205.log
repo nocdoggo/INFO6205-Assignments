@@ -87,3 +87,4 @@
 2021-09-26 22:40:05 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,000 runs
 2021-09-26 22:40:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,000 runs
 2021-09-26 22:40:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,000 runs
+2021-09-26 23:03:47 INFO  Benchmark_Timer - Begin run: testWaitPeriods with 2 runs
