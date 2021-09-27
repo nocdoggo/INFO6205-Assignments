@@ -88,3 +88,43 @@
 2021-09-26 22:40:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,000 runs
 2021-09-26 22:40:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,000 runs
 2021-09-26 23:03:47 INFO  Benchmark_Timer - Begin run: testWaitPeriods with 2 runs
+2021-09-26 23:26:55 DEBUG Config - Config.get(helper, instrument) = true
+2021-09-26 23:26:55 DEBUG Config - Config.get(helper, seed) = 0
+2021-09-26 23:26:55 DEBUG Config - Config.get(instrumenting, copies) = true
+2021-09-26 23:26:55 DEBUG Config - Config.get(instrumenting, swaps) = true
+2021-09-26 23:26:55 DEBUG Config - Config.get(instrumenting, compares) = true
+2021-09-26 23:26:55 DEBUG Config - Config.get(instrumenting, inversions) = 1
+2021-09-26 23:26:55 DEBUG Config - Config.get(instrumenting, fixes) = true
+2021-09-26 23:26:55 DEBUG Config - Config.get(instrumenting, hits) = true
+2021-09-26 23:26:55 DEBUG Config - Config.get(helper, cutoff) = 
+2021-09-26 23:34:21 INFO  Benchmark_Timer - Begin run: InsertionSort with 10,000 runs
+2021-09-26 23:41:06 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+2021-09-26 23:41:06 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+2021-09-26 23:41:06 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+2021-09-26 23:41:06 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+2021-09-26 23:41:06 INFO  Benchmark_Timer - Begin run: InsertionSort with 400 runs
+2021-09-26 23:41:06 INFO  Benchmark_Timer - Begin run: InsertionSort with 400 runs
+2021-09-26 23:41:06 INFO  Benchmark_Timer - Begin run: InsertionSort with 400 runs
+2021-09-26 23:41:06 INFO  Benchmark_Timer - Begin run: InsertionSort with 400 runs
+2021-09-26 23:41:06 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,600 runs
+2021-09-26 23:41:09 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,600 runs
+2021-09-26 23:41:09 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,600 runs
+2021-09-26 23:41:11 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,600 runs
+2021-09-26 23:41:14 INFO  Benchmark_Timer - Begin run: InsertionSort with 6,400 runs
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 400 runs
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 400 runs
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 400 runs
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 400 runs
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,600 runs
+2021-09-26 23:41:39 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,600 runs
+2021-09-26 23:41:39 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,600 runs
+2021-09-26 23:41:41 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,600 runs
+2021-09-26 23:41:44 INFO  Benchmark_Timer - Begin run: InsertionSort with 6,400 runs
+2021-09-26 23:43:39 INFO  Benchmark_Timer - Begin run: InsertionSort with 6,400 runs
+2021-09-26 23:43:39 INFO  Benchmark_Timer - Begin run: InsertionSort with 6,400 runs
+2021-09-26 23:45:21 INFO  Benchmark_Timer - Begin run: InsertionSort with 6,400 runs
+2021-09-26 23:49:03 INFO  Benchmark_Timer - Begin run: InsertionSort with 25,600 runs

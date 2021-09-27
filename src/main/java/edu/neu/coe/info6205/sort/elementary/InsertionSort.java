@@ -104,12 +104,19 @@ public class InsertionSort<X extends Comparable<X>> extends SortWithHelper<X> {
 
     // Insert benchmark code
 
-    public static void main(String[] args) throws IOException {
-        int NumOfRuns = 1000;
+    /**
+     * The benchmark for various conditions
+     */
 
-        // Starting with 1000
-        for(int temp = 1000; temp <= 10000; temp = temp + 1000) {
-            int iterationCount = temp;
+    public static void main(String[] args) throws IOException {
+        int NumOfRuns = 0;
+
+        int[] testCases = new int[] {100, 200, 400, 800, 1600, 6400, 25600};
+
+        // Starting with 10000
+        for(int t = 0; t < testCases.length; t++) {
+            NumOfRuns = testCases[t];
+            int iterationCount = NumOfRuns;
 
 
             BaseHelper<Integer> helper = new BaseHelper<>("InsertionSort", iterationCount, Config.load(InsertionSort.class));

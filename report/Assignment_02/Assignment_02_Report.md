@@ -1,151 +1,333 @@
-### `Noctis Yamazaki Zhang  (NUID: 002105657)          `
+### `Noctis Yamazaki Zhang (NUID: 002105657)          `
 
 # INFO 6205 Program Structures & Algorithms [Fall 2021]
 
-## Assignment 1 (Random Walk)
+## Assignment 2 (Benchmark)
 
-### 1. Your **conclusion** about the relationship between $d$ and $n$
+### 1. *Timer* Class Implementation
 
-$D \ = \ \sqrt[]{n} \ particularly \ when \ n \rightarrow \infin $.
+The benchmark provided in the `Benchmark_Timer` has passed, by running on `Windows 10 21H2` with `Ryzen 5900X` coupled with `Amazon Corretto 11.0.12_7`. Result can be witness as:
 
-### 2. Your **evidence** to support that relationship
+<img src="img/Benchmark_Timer.PNG" style="zoom:80%;" />
 
- The result can be seen as:
+The benchmark provided in the `InsertionSortTest` has passed, by running on `Windows 10 21H2` with `Ryzen 5900X` coupled with `Amazon Corretto 11.0.12_7`. Result can be witness as:
 
-![ResultTable](D:/GitHub/INFO-6205/src/main/java/edu/neu/coe/info6205/randomwalk/ResultTable.PNG)
+<img src="img/InsertionSortTest.PNG" style="zoom:75%;" />
 
-When it comes to the random walk question, per the statement, the man has the ability to walk with a unit length of 1 in a 2-Dimensional space. (Unless he can fly with a rocket launcher I reckon?) Therefore, the distance $D$ shall consists of horizontal (Let's say, from the west to the east in this case.) component, plus the vertical (Evidently, it would be from the south to the north in this case.) component. We denote that $x_{i}$ represents the length of the horizontal component, and $y_{i}$ represents the vertical component.  Therefore, the distance $D$ can be expressed as:
+The benchmark provided in the `Benchmark_Timer` has passed, by running on `Macos 11.12.5` with `Intel i7-7920HQ` coupled with `Oracle JDK 17`. Result can be witness as:
 
-$D \ = \ \sqrt[]{(\sum_{i=1}^{n}{x_{i}})^{2} \ + \ (\sum_{i=1}^{n}{y_{i}})^{2}} \ \ \ \ \ \ whereas \ x_{i} \ and \ y_{i} \ are \pm 1 \ since \ they \ are \ directional.$
+Do notice that for whatever unknown reasons, even though the Windows platform was able to finish tasks sooner, but failed on `testRepeat2` and `testRepeat3`. Which the Intel platform does not seem to have such issue.
 
-Since my math skill sucks, please allow me to start focusing on one dimension at first, the horizontal, or from the west to the east you may say.
+<img src="img/TimerTest.png" style="zoom:70%;" />
 
-Let us denote the total of the horizontal component to be $D_{x}$, then we will have:
-
-$D_{x} \ = \sum_{i=1}^{n}{x_{i}} \ = \ x_{1} \ + \ x_{2} \ + \ + \ ... \ + \ x_{n}$
-
-If we say that there is $50-50$ chance for the man to walk $+ \ 1$ or $- \ 1$, then it makes no sense to claim that when $n \ \rightarrow \ \infin$, the average would go to $0$, which sounds like bullshit. However, do note that we are in a 2-Dimensional system, and we are trying to track how far the man has go from the origin location to the end point. Hence, we have to factor in the direction. Since $D_{x}$ can be positive or negative depending on the direction. In order to rule out the influence of direction, to some extent, we need to compute $D_{x}^{2}$ instead, since it is always going to be positive.
-
-In this way, we can get the expression of  $D_{x}^{2}$ as:
-
-$D_{x}^{2} \ = \ (\sum_{i=1}^{n}{x_{i}})^{2} \ = (\ x_{1} \ + \ x_{2} \ + \ + \ ... \ + \ x_{n})^{2} \\ = \ [\ (x_{1})^{2} \ + \ (x_{2})^{2} \ + \ + \ ... \ + \ (x_{n})^{2}) \ ] \ + \ 2 \ \times \ [ \ (x_{1}x_{2} \ + \ x_{1}x_{3} \ + \ + \ ... \ + \ x_{1}x_{n}) \ + \\ (x_{2}x_{3} \ + \ x_{2}x_{4} \ + \ + \ ... \ + \ x_{2}x_{n}) \ + \ ... \ + \ (x_{n-1}x_{n})] $
-
-Let us consider $x_{i}$, since each value is either $+ \ 1$ or $- \ 1$, therefore, it is evident that $x_{i}^{2}$ is simply $1$. However, when it comes to the latter part of the expanded portion in the aforementioned expression, we can get a table to illustrate the possible outcomes of ${x_{i}x_{j}}$ whereas $i \ \in \ [1,n] , \ j \ \in \ [i,n] \ whereas \ both \ i \ and \ j \ are \ integers.$ 
-
-| $x_{i}$ | $x_{j}$ | $x_{i}x_{j}$ |
-| ------- | ------- | ------------ |
-| 1       | 1       | 1            |
-| -1      | 1       | -1           |
-| 1       | -1      | -1           |
-| -1      | -1      | 1            |
-
-According to the table, we can see that $x_{i}x_{j}$ have $50-50$ chance to be either $+ \ 1$ or $- \ 1$. Then, we can conclude that when  $n \ \rightarrow \ \infin$, the sum of all $\sum_{i=1}^{n}\sum_{j=i}^{n}x_{i}x_{j}$ would be $0$. Hence, the previous expression of $D_{x}^{2}$ can be estimated as:
-
-$D_{x}^{2} \ = \ [1 \ + \ 1 \ + \ ... \ + \ 1] \ + \ 2 \ \times \ 0 \ = \ n$
-
-Similarly, if we look at the vertical direction, or from the south to the north in this case scenario, we will be able to yield:
-
-$D_{y}^{2} \ = \ [1 \ + \ 1 \ + \ ... \ + \ 1] \ + \ 2 \ \times \ 0 \ = \ n$
-
-The last step is to put them together to compute the square of the overall distance $D$, which can be expressed as $D^{2}$. Since there is $50-50$ chance for the man to walk either in horizontal or vertical direction. $P_{x} = \frac{1}{2}$ and $P_{y} = \frac{1}{2}$ 
-
-$D^{2} \ = \ P_{x} D_{x}^{2} \ + \ P_{y}D_{y}^{2} \ = \ \frac{1}{2} \times n \ + \ \frac{1}{2} \times n \ = \ n $
-
-To simply put, the expression of $D$ can be expressed as:
-
-$D \ = \ \sqrt[]{n} \ particularly \ when \ n \rightarrow \infin $.
-
-### 3. Your **code** (RandomWalk.java plus anything else that you changed or created)
-
-In `RandomWalk.java`:
-
-The following code is added:
+The code which has been implemented is:
 
 ```java
     /**
-     * Private method to move the current position, that's to say the drunkard moves
+     * Pause (without counting a lap); run the given functions n times while being timed, i.e. once per "lap", and finally return the result of calling meanLapTime().
      *
-     * @param dx the distance he moves in the x direction
-     * @param dy the distance he moves in the y direction
+     * @param n            the number of repetitions.
+     * @param supplier     a function which supplies a T value.
+     * @param function     a function T=>U and which is to be timed.
+     * @param preFunction  a function which pre-processes a T value and which precedes the call of function, but which is not timed (may be null).
+     * @param postFunction a function which consumes a U and which succeeds the call of function, but which is not timed (may be null).
+     * @return the average milliseconds per repetition.
      */
-    private void move(int dx, int dy) {
-        // TO BE IMPLEMENTED
-        // First, we need to know that x is the accumulation of dx.
-        // And y is just the accumulation of dy
+    public <T, U> double repeat(int n, Supplier<T> supplier, Function<T, U> function, UnaryOperator<T> preFunction, Consumer<U> postFunction) {
+        logger.trace("repeat: with " + n + " runs");
+        // TO BE IMPLEMENTED: note that the timer is running when this method is called and should still be running when it returns.
 
-        x += dx;
-        y += dy;
+        // Initialize a pause before the interation of loops
+        pause();
+        // Might be wrong
 
-        // I think that should be it?
-    }
-```
+        // Then it is safe to start the iteration
+//        for (int i = 0; i < n; i ++) {
+//
+//            pause();
+//
+//            // Use T class trigger get
+//            T tt = supplier.get();
+//            resume();
+//
+//            // check if not null
+//            if (preFunction != null) {
+//
+//                pause();
+//
+//                // Apply tt
+//
+//                preFunction.apply(tt);
+//                resume();
+//
+//            }
+//
+//
+//            U uu = function.apply(tt);
+//
+//            // Trigger pause and lap
+//            pauseAndLap();
+//
+//            // Essentially time to stop here
+//            if (postFunction != null) {
+//                pause();
+//                postFunction.accept(uu);
+//                resume();
+//            }
+//
+//        }
+//
+//        pause();
+//
+//        double finalt = meanLapTime();
+//
+//        resume();
+//        return finalt;
 
+        // Let's try something new
+        // There should be 4 conditions we need to address
+        
+        // Otherwise, there can by null pointer issues
+        int i = 0;
+        // Check all four
+        while(i < n) {
+            if (preFunction == null && postFunction == null) {
+                T t = supplier.get();
 
+                resume();
 
-```java
-    /**
-     * Perform a random walk of m steps
-     *
-     * @param m the number of steps the drunkard takes
-     */
-    private void randomWalk(int m) {
-        // TO BE IMPLEMENTED
-        // So we will have m iterations.
-        for (int i = 0; i < m; i++){
-            // Then we call out the randomMove I reckon?
-            // Otherwise it is gonna be a clusterfuck.
-            randomMove();
+                function.apply(t);
+
+                pauseAndLap();
+
+            } else if (preFunction == null && postFunction != null) {
+
+                T t = supplier.get();
+                resume();
+                U u = function.apply(t);
+                pauseAndLap();
+                postFunction.accept(u);
+            } else if (preFunction != null && postFunction == null) {
+
+                T t = supplier.get();
+                t = preFunction.apply(t);
+
+                resume();
+
+                function.apply(t);
+                pauseAndLap();
+
+            } else {
+
+                T t = supplier.get();
+                t = preFunction.apply(t);
+
+                resume();
+
+                U u = function.apply(t);
+                pauseAndLap();
+                postFunction.accept(u);
+            }
+            // Now plus one
+            i++;
         }
+        return meanLapTime();
 
-    }
-```
-
-
-
-```java
-    /**
-     * Method to compute the distance from the origin (the lamp-post where the drunkard starts) to his current position.
-     *
-     * @return the (Euclidean) distance from the origin to the current position.
-     */
-    public double distance() {
-        // TO BE IMPLEMENTED
-
-        // Now we calculate the thing as:
-        double dist_temp = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
 
         //return 0;
-        // Instead of returning 0.
-        return dist_temp;
-
     }
 ```
 
-This code is used to generate the relationship table for ==Section 2==.
+The supplement functions are:
 
 ```java
-    public static void main(String[] args) {
-//        if (args.length == 0)
-//            throw new RuntimeException("Syntax: RandomWalk steps [experiments]");
-//        int m = Integer.parseInt(args[0]);
-        int[] m = new int[10];
-        int n = 5000;
+    /**
+     * Get the number of ticks from the system clock.
+     * <p>
+     * NOTE: (Maintain consistency) There are two system methods for getting the clock time.
+     * Ensure that this method is consistent with toMillisecs.
+     *
+     * @return the number of ticks for the system clock. Currently defined as nano time.
+     */
+    private static long getClock() {
+        // TO BE IMPLEMENTED
 
-        for (int i = 0; i < 10; i++) {
-            // Recycle the same function.
-            m[i] =  (i+1)*(i+1);
-        }
+        // I guess just return with nano time
+        return System.nanoTime();
+        //return 0;
+    }
 
-//        if (args.length > 1) n = Integer.parseInt(args[1]);
-        for (int j:m) {
-            double meanDistance = randomWalkMulti(j, n);
-            System.out.println(j + " steps: " + meanDistance + " over " + n + " experiments");
-        }
+    /**
+     * NOTE: (Maintain consistency) There are two system methods for getting the clock time.
+     * Ensure that this method is consistent with getTicks.
+     *
+     * @param ticks the number of clock ticks -- currently in nanoseconds.
+     * @return the corresponding number of milliseconds.
+     */
+    private static double toMillisecs(long ticks) {
+        // TO BE IMPLEMENTED
 
+        //return ((double) ticks / 1000000);
+
+        return (Math.max(0L, Math.round(ticks / 1000000.0d)));
+
+        // return 0;
     }
 ```
 
-### 4. A screen shot of the unit tests all passing
+When it comes to the benchmark for arrays under various conditions, the benchmark result can be seen as
 
-![UnitTest](D:/GitHub/INFO-6205/src/main/java/edu/neu/coe/info6205/randomwalk/UnitTest.PNG)
+![](img/Benchmark_Various.PNG)
 
+### ==The code being developed is nested under `InsertionSort.java`:==
+
+```java
+    /**
+     * The benchmark for various conditions
+     */
+
+    public static void main(String[] args) throws IOException {
+        int NumOfRuns = 0;
+
+        int[] testCases = new int[] {100, 400, 1600, 6400, 25600, 102400, 409600};
+
+        // Starting with 10000
+        for(int t = 0; t < testCases.length; t++) {
+            NumOfRuns = testCases[t];
+            int iterationCount = NumOfRuns;
+
+
+            BaseHelper<Integer> helper = new BaseHelper<>("InsertionSort", iterationCount, Config.load(InsertionSort.class));
+
+            SortWithHelper<Integer> sorter = new InsertionSort<>(helper);
+
+            Benchmark<Integer[]> benchmarkTimer = new Benchmark_Timer<>("InsertionSort", sorter::preProcess, sorter::sort);
+
+
+            // For random order test
+            System.out.println("");
+            System.out.println("======================================================================================");
+            System.out.println("");
+            double randomOrderTest = benchmarkTimer.run(helper.random(Integer.class, r -> r.nextInt(iterationCount)), NumOfRuns);
+            System.out.println("For random order @ " + iterationCount + " times running," + " the runtime is " + randomOrderTest);
+
+            System.out.println("");
+//            System.out.println("======================================================================================");
+
+            // Now, we run the ordered array test
+            Integer[] numberIncreasingArray = new Integer[iterationCount];
+            for (int i = 0; i < iterationCount; i++) {
+
+                // Simply copy over
+                numberIncreasingArray[i] = i;
+            }
+
+            double orderedArrayTest = benchmarkTimer.run(numberIncreasingArray, NumOfRuns);
+//            System.out.println("");
+            System.out.println("For ordered @ " + iterationCount + " times running," + " the runtime is " + orderedArrayTest);
+
+//            System.out.println("");
+//            System.out.println("======================================================================================");
+            System.out.println("");
+
+            // For the partially ordered array
+            Integer[] messyArray = helper.random(Integer.class, r -> r.nextInt(iterationCount));
+            Arrays.sort(messyArray, messyArray.length / 3, messyArray.length * 2 / 3);
+
+            double partiallyOrderedTest = benchmarkTimer.run(messyArray, NumOfRuns);
+            System.out.println("Partially ordered " + iterationCount + " times running," + " the runtime is " + partiallyOrderedTest);
+
+            // Now we flip it and run
+            Integer[] flippedArray = new Integer[iterationCount];
+            for (int i = 0; i < iterationCount; i++) {
+                flippedArray[i] = iterationCount - (i + 1);
+            }
+
+            System.out.println("");
+
+            double flippedOrderTest = benchmarkTimer.run(flippedArray, NumOfRuns);
+            System.out.println("Reversed " + iterationCount + " times running," + " the runtime is " + flippedOrderTest);
+        }
+    }
+```
+
+
+
+### 2. Conclusion Regarding the Relationship
+
+When it comes to the runtime requirement for each array condition, the order should be
+
+`Ordered Array` < `Partially-Ordered Array` ≈ `Random Array` < `Reverse-Ordered Array`.
+
+The complexity and runtime should follow:
+
+|                    | Ordered Array | Partially-Ordered Array | Random Array         | Reverse-Ordered Array |
+| ------------------ | ------------- | ----------------------- | -------------------- | --------------------- |
+| Runtime Complexity | $O(N)$        | $O(N) \ to \ O(N^2)$    | $O(N) \ to \ O(N^2)$ | $O(N^2)$              |
+
+Detailed information can be seen as:
+
+```bash
+======================================================================================
+
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 200 runs
+For random order @ 100 times running, the runtime is 0.10623
+
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 200 runs
+For ordered @ 100 times running, the runtime is 0.005118
+
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 200 runs
+Partially ordered 100 times running, the runtime is 0.022323
+
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 200 runs
+Reversed 100 times running, the runtime is 0.1112104
+
+======================================================================================
+
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 400 runs
+For random order @ 400 times running, the runtime is 0.1225
+
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 400 runs
+For ordered @ 400 times running, the runtime is 0.0025
+
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 400 runs
+Partially ordered 400 times running, the runtime is 0.105
+
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 400 runs
+Reversed 400 times running, the runtime is 0.24
+
+======================================================================================
+
+2021-09-26 23:41:36 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,600 runs
+For random order @ 1600 times running, the runtime is 1.929375
+
+2021-09-26 23:41:39 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,600 runs
+For ordered @ 1600 times running, the runtime is 0.00625
+
+2021-09-26 23:41:39 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,600 runs
+Partially ordered 1600 times running, the runtime is 1.111875
+
+2021-09-26 23:41:41 INFO  Benchmark_Timer - Begin run: InsertionSort with 1,600 runs
+Reversed 1600 times running, the runtime is 2.06
+
+======================================================================================
+
+2021-09-26 23:41:44 INFO  Benchmark_Timer - Begin run: InsertionSort with 6,400 runs
+For random order @ 6400 times running, the runtime is 17.89921875
+
+2021-09-26 23:43:39 INFO  Benchmark_Timer - Begin run: InsertionSort with 6,400 runs
+For ordered @ 6400 times running, the runtime is 0.0159375
+
+2021-09-26 23:43:39 INFO  Benchmark_Timer - Begin run: InsertionSort with 6,400 runs
+Partially ordered 6400 times running, the runtime is 15.9234375
+
+2021-09-26 23:45:21 INFO  Benchmark_Timer - Begin run: InsertionSort with 6,400 runs
+Reversed 6400 times running, the runtime is 34.741875
+
+======================================================================================
+
+2021-09-26 23:49:03 INFO  Benchmark_Timer - Begin run: InsertionSort with 25,600 runs
+
+```
+
+![](img/Runtime.PNG)
