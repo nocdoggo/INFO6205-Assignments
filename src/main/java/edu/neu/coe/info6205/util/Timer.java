@@ -57,51 +57,98 @@ public class Timer {
         // TO BE IMPLEMENTED: note that the timer is running when this method is called and should still be running when it returns.
 
         // Initialize a pause before the interation of loops
-        //pause();
+        pause();
         // Might be wrong
 
         // Then it is safe to start the iteration
-        for (int i = 0; i < n; i ++) {
+//        for (int i = 0; i < n; i ++) {
+//
+//            pause();
+//
+//            // Use T class trigger get
+//            T tt = supplier.get();
+//            resume();
+//
+//            // check if not null
+//            if (preFunction != null) {
+//
+//                pause();
+//
+//                // Apply tt
+//
+//                preFunction.apply(tt);
+//                resume();
+//
+//            }
+//
+//
+//            U uu = function.apply(tt);
+//
+//            // Trigger pause and lap
+//            pauseAndLap();
+//
+//            // Essentially time to stop here
+//            if (postFunction != null) {
+//                pause();
+//                postFunction.accept(uu);
+//                resume();
+//            }
+//
+//        }
+//
+//        pause();
+//
+//        double finalt = meanLapTime();
+//
+//        resume();
+//        return finalt;
 
-            pause();
+        // Let's try something new
+        // There should be 4 conditions we need to address
+        int i = 0;
+        // Check all four
+        while(i < n) {
+            if (preFunction == null && postFunction == null) {
+                T t = supplier.get();
 
-            // Use T class trigger get
-            T tt = supplier.get();
-            resume();
-
-            // check if not null
-            if (preFunction != null) {
-
-                pause();
-
-                // Apply tt
-
-                preFunction.apply(tt);
                 resume();
 
-            }
+                function.apply(t);
 
+                pauseAndLap();
 
-            U uu = function.apply(tt);
+            } else if (preFunction == null && postFunction != null) {
 
-            // Trigger pause and lap
-            pauseAndLap();
-
-            // Essentially time to stop here
-            if (postFunction != null) {
-                pause();
-                postFunction.accept(uu);
+                T t = supplier.get();
                 resume();
-            }
+                U u = function.apply(t);
+                pauseAndLap();
+                postFunction.accept(u);
+            } else if (preFunction != null && postFunction == null) {
 
+                T t = supplier.get();
+                t = preFunction.apply(t);
+
+                resume();
+
+                function.apply(t);
+                pauseAndLap();
+
+            } else {
+
+                T t = supplier.get();
+                t = preFunction.apply(t);
+
+                resume();
+
+                U u = function.apply(t);
+                pauseAndLap();
+                postFunction.accept(u);
+            }
+            // Now plus one
+            i++;
         }
-
-        pause();
-
-        double finalt = meanLapTime();
-
-        resume();
-        return finalt;
+        return meanLapTime();
 
 
         //return 0;

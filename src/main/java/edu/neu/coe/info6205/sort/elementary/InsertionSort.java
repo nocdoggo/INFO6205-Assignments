@@ -6,6 +6,8 @@ package edu.neu.coe.info6205.sort.elementary;
 import edu.neu.coe.info6205.sort.BaseHelper;
 import edu.neu.coe.info6205.sort.Helper;
 import edu.neu.coe.info6205.sort.SortWithHelper;
+import edu.neu.coe.info6205.util.Benchmark;
+import edu.neu.coe.info6205.util.Benchmark_Timer;
 import edu.neu.coe.info6205.util.Config;
 
 
@@ -98,5 +100,68 @@ public class InsertionSort<X extends Comparable<X>> extends SortWithHelper<X> {
 
     public static <T extends Comparable<T>> void sort(T[] ts) {
         new InsertionSort<T>().mutatingSort(ts);
+    }
+
+    // Insert benchmark code
+
+    public static void main(String[] args) throws IOException {
+        int NumOfRuns = 1000;
+
+        // Starting with 1000
+        for(int temp = 1000; temp <= 10000; temp = temp + 1000) {
+            int iterationCount = temp;
+
+
+            BaseHelper<Integer> helper = new BaseHelper<>("InsertionSort", iterationCount, Config.load(InsertionSort.class));
+
+            SortWithHelper<Integer> sorter = new InsertionSort<>(helper);
+
+            Benchmark<Integer[]> benchmarkTimer = new Benchmark_Timer<>("InsertionSort", sorter::preProcess, sorter::sort);
+
+
+            // For random order test
+            System.out.println("");
+            System.out.println("======================================================================================");
+            System.out.println("");
+            double randomOrderTest = benchmarkTimer.run(helper.random(Integer.class, r -> r.nextInt(iterationCount)), NumOfRuns);
+            System.out.println("For random order @ " + iterationCount + " times running," + " the runtime is " + randomOrderTest);
+
+            System.out.println("");
+//            System.out.println("======================================================================================");
+
+            // Now, we run the ordered array test
+            Integer[] numberIncreasingArray = new Integer[iterationCount];
+            for (int i = 0; i < iterationCount; i++) {
+
+                // Simply copy over
+                numberIncreasingArray[i] = i;
+            }
+
+            double orderedArrayTest = benchmarkTimer.run(numberIncreasingArray, NumOfRuns);
+//            System.out.println("");
+            System.out.println("For ordered @ " + iterationCount + " times running," + " the runtime is " + orderedArrayTest);
+
+//            System.out.println("");
+//            System.out.println("======================================================================================");
+            System.out.println("");
+
+            // For the partially ordered array
+            Integer[] messyArray = helper.random(Integer.class, r -> r.nextInt(iterationCount));
+            Arrays.sort(messyArray, messyArray.length / 3, messyArray.length * 2 / 3);
+
+            double partiallyOrderedTest = benchmarkTimer.run(messyArray, NumOfRuns);
+            System.out.println("Partially ordered " + iterationCount + " times running," + " the runtime is " + partiallyOrderedTest);
+
+            // Now we flip it and run
+            Integer[] flippedArray = new Integer[iterationCount];
+            for (int i = 0; i < iterationCount; i++) {
+                flippedArray[i] = iterationCount - (i + 1);
+            }
+
+            System.out.println("");
+
+            double flippedOrderTest = benchmarkTimer.run(flippedArray, NumOfRuns);
+            System.out.println("Reversed " + iterationCount + " times running," + " the runtime is " + flippedOrderTest);
+        }
     }
 }

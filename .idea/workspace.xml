@@ -23,9 +23,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="JUnit.TimerTest">
+    <configuration name="InsertionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.sort.elementary.InsertionSort" />
+      <module name="INFO-6205" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.neu.coe.info6205.sort.elementary.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RandomWalk" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.randomwalk.RandomWalk" />
       <module name="INFO-6205" />
@@ -50,22 +64,6 @@
       <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.randomwalk" />
       <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.randomwalk.RandomWalkTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RandomWalkTest.testRandomWalk2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="INFO-6205" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.neu.coe.info6205.randomwalk.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.randomwalk" />
-      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.randomwalk.RandomWalkTest" />
-      <option name="METHOD_NAME" value="testRandomWalk2" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,10 +102,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TimerTest" />
+        <item itemvalue="Application.InsertionSort" />
         <item itemvalue="JUnit.TimerTest.testStop" />
         <item itemvalue="Application.RandomWalk" />
         <item itemvalue="JUnit.RandomWalkTest" />
-        <item itemvalue="JUnit.RandomWalkTest.testRandomWalk2" />
       </list>
     </recent_temporary>
   </component>
@@ -123,7 +121,7 @@
       <workItem from="1631420358708" duration="44000" />
       <workItem from="1631761026365" duration="3204000" />
       <workItem from="1632105495919" duration="3146000" />
-      <workItem from="1632705395723" duration="3773000" />
+      <workItem from="1632705395723" duration="5218000" />
     </task>
     <servers />
   </component>
