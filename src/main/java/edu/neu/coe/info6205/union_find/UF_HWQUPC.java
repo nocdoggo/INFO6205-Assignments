@@ -91,8 +91,12 @@ public class UF_HWQUPC implements UF {
                 // go down the hill
                 doPathCompression(root);
 
-                root = parent[root];
+
+                // Dumb fuck for leaving it here. It should be executed regardless
+                //root = parent[root];
             }
+
+            root = parent[root];
         }
 
         // This time, we do need to return the root as the result of the function

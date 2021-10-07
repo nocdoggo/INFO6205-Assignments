@@ -26,8 +26,8 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="JUnit.UF_HWQUPC_Test.testFind3">
-    <configuration name="UF_HWQUPC_Test.testConnect02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UF_HWQUPC_Test">
+    <configuration name="UF_HWQUPC_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="INFO-6205" />
       <extension name="coverage">
         <pattern>
@@ -37,24 +37,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.union_find" />
       <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.union_find.UF_HWQUPC_Test" />
-      <option name="METHOD_NAME" value="testConnect02" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UF_HWQUPC_Test.testFind0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="INFO-6205" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.neu.coe.info6205.union_find.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.union_find" />
-      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.union_find.UF_HWQUPC_Test" />
-      <option name="METHOD_NAME" value="testFind0" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,13 +90,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WQUPCTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="INFO-6205" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.neu.coe.info6205.union_find.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.union_find" />
+      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.union_find.WQUPCTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UF_HWQUPC_Test" />
+        <item itemvalue="JUnit.WQUPCTest" />
         <item itemvalue="JUnit.UF_HWQUPC_Test.testFind3" />
         <item itemvalue="JUnit.UF_HWQUPC_Test.testFind2" />
         <item itemvalue="JUnit.UF_HWQUPC_Test.testFind1" />
-        <item itemvalue="JUnit.UF_HWQUPC_Test.testFind0" />
-        <item itemvalue="JUnit.UF_HWQUPC_Test.testConnect02" />
       </list>
     </recent_temporary>
   </component>
@@ -131,7 +129,7 @@
       <workItem from="1632105495919" duration="3146000" />
       <workItem from="1632705395723" duration="9681000" />
       <workItem from="1633588602573" duration="39000" />
-      <workItem from="1633588677573" duration="3434000" />
+      <workItem from="1633588677573" duration="4233000" />
     </task>
     <servers />
   </component>
