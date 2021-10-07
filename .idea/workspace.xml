@@ -26,76 +26,82 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.InsertionSort">
-    <configuration name="InsertionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.sort.elementary.InsertionSort" />
+  <component name="RunManager" selected="JUnit.UF_HWQUPC_Test.testFind3">
+    <configuration name="UF_HWQUPC_Test.testConnect02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="INFO-6205" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.neu.coe.info6205.sort.elementary.*" />
+          <option name="PATTERN" value="edu.neu.coe.info6205.union_find.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.union_find" />
+      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.union_find.UF_HWQUPC_Test" />
+      <option name="METHOD_NAME" value="testConnect02" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BenchmarkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UF_HWQUPC_Test.testFind0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="INFO-6205" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.neu.coe.info6205.util.*" />
+          <option name="PATTERN" value="edu.neu.coe.info6205.union_find.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.util" />
-      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.util.BenchmarkTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.union_find" />
+      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.union_find.UF_HWQUPC_Test" />
+      <option name="METHOD_NAME" value="testFind0" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InsertionSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UF_HWQUPC_Test.testFind1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="INFO-6205" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.neu.coe.info6205.sort.elementary.*" />
+          <option name="PATTERN" value="edu.neu.coe.info6205.union_find.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.sort.elementary" />
-      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.sort.elementary.InsertionSortTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.union_find" />
+      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.union_find.UF_HWQUPC_Test" />
+      <option name="METHOD_NAME" value="testFind1" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UF_HWQUPC_Test.testFind2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="INFO-6205" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.neu.coe.info6205.util.*" />
+          <option name="PATTERN" value="edu.neu.coe.info6205.union_find.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.util" />
-      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.util.TimerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.union_find" />
+      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.union_find.UF_HWQUPC_Test" />
+      <option name="METHOD_NAME" value="testFind2" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimerTest.testStop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UF_HWQUPC_Test.testFind3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="INFO-6205" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.neu.coe.info6205.util.*" />
+          <option name="PATTERN" value="edu.neu.coe.info6205.union_find.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.util" />
-      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.util.TimerTest" />
-      <option name="METHOD_NAME" value="testStop" />
+      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.union_find" />
+      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.union_find.UF_HWQUPC_Test" />
+      <option name="METHOD_NAME" value="testFind3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -103,11 +109,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.InsertionSort" />
-        <item itemvalue="JUnit.InsertionSortTest" />
-        <item itemvalue="JUnit.BenchmarkTest" />
-        <item itemvalue="JUnit.TimerTest" />
-        <item itemvalue="JUnit.TimerTest.testStop" />
+        <item itemvalue="JUnit.UF_HWQUPC_Test.testFind3" />
+        <item itemvalue="JUnit.UF_HWQUPC_Test.testFind2" />
+        <item itemvalue="JUnit.UF_HWQUPC_Test.testFind1" />
+        <item itemvalue="JUnit.UF_HWQUPC_Test.testFind0" />
+        <item itemvalue="JUnit.UF_HWQUPC_Test.testConnect02" />
       </list>
     </recent_temporary>
   </component>
@@ -124,6 +130,8 @@
       <workItem from="1631761026365" duration="3204000" />
       <workItem from="1632105495919" duration="3146000" />
       <workItem from="1632705395723" duration="9681000" />
+      <workItem from="1633588602573" duration="39000" />
+      <workItem from="1633588677573" duration="3434000" />
     </task>
     <servers />
   </component>

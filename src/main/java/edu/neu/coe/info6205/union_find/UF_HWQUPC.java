@@ -82,6 +82,20 @@ public class UF_HWQUPC implements UF {
         validate(p);
         int root = p;
         // TO BE IMPLEMENTED
+
+        // using a while loop till the root is the same of the root of the parent, my english sucks
+        while (root != parent[root]) {
+
+            // Use the simple boolean checker
+            if (pathCompression) {
+                // go down the hill
+                doPathCompression(root);
+
+                root = parent[root];
+            }
+        }
+
+        // This time, we do need to return the root as the result of the function
         return root;
     }
 
@@ -169,6 +183,32 @@ public class UF_HWQUPC implements UF {
 
     private void mergeComponents(int i, int j) {
         // TO BE IMPLEMENTED make shorter root point to taller one
+        // If both hand sides are the same
+        if (i == j) {
+            // no shit needs to be done
+
+            // Not sure if necessary
+            // count++;
+            // height[i]++;
+
+            return;
+        }
+
+        // Then we need to check the height of the thing
+        if (height[i] > height[j]) {
+
+            // Use the existing function
+            updateParent(j, i);
+            updateHeight(i, j);
+
+        } else {
+
+            // Reverse order
+            updateParent(i, j);
+            updateHeight(j, i);
+
+            // I don't know if I am thinking this wrong
+        }
     }
 
     /**
@@ -176,5 +216,6 @@ public class UF_HWQUPC implements UF {
      */
     private void doPathCompression(int i) {
         // TO BE IMPLEMENTED update parent to value of grandparent
+        updateParent(i, parent[parent[i]]);
     }
 }
