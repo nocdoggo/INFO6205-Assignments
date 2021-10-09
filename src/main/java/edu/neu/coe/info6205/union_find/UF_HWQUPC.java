@@ -199,7 +199,9 @@ public class UF_HWQUPC implements UF {
         }
 
         // Then we need to check the height of the thing
-        if (height[i] > height[j]) {
+        // Fucking hell for forgetting the equal condition.
+
+        if (height[i] >= height[j]) {
 
             // Use the existing function
             updateParent(j, i);
