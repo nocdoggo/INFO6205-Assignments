@@ -179,9 +179,15 @@ When it comes to the optimal performance point with the respect to the number of
 
 When it comes to the best performance point for each given `threadCount`, it is safe to conclude that the program reaches its peak performance where `cutoff` value equals to $\frac{1}{threadCount}$ of the size of the array. For instance, when the cutoff value is $0.125 \ * \ arraySize$, the programs runs at best performance with 8 threads.
 
+|                                                   | INTEL i7-7920HQ | AMD R9 5900X | AMD R9 5950X |
+| ------------------------------------------------- | --------------- | ------------ | ------------ |
+| Cutoff = 1000, threadCount = 1, arrSize = 100,000 | 19.3            | 14.4         | 14.8         |
+| Cutoff = 4000, threadCount = 1, arrSize = 100,000 | 8.2             | 5.7          | 5.8          |
+| Cutoff = 4000, threadCount = 4, arrSize = 100,000 | 2.8             | 2.1          | 2.1          |
+
 Then, we need to focus on the nature of the CPU. We have to admit that the program would benefit from the high core clock frequency. When we set the `cutoff` value and the `threadCount` to be the same for all three platforms, it was observable that the AMD CPUs all ran faster than the INTEL CPU.
 
-
+---
 
 ## Exhibition A
 
