@@ -33,13 +33,26 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.HWQUPC_Solution">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="HWQUPC_Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.union_find.HWQUPC_Solution" />
       <module name="INFO-6205" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="edu.neu.coe.info6205.union_find.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.sort.par.Main" />
+      <module name="INFO-6205" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.neu.coe.info6205.sort.par.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -75,22 +88,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UF_HWQUPC_Test.testFind3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="INFO-6205" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.neu.coe.info6205.union_find.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.union_find" />
-      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.union_find.UF_HWQUPC_Test" />
-      <option name="METHOD_NAME" value="testFind3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="WQUPCTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="INFO-6205" />
       <extension name="coverage">
@@ -108,11 +105,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.HWQUPC_Solution" />
         <item itemvalue="JUnit.UF_HWQUPC_Test" />
         <item itemvalue="Application.UF_client_runner" />
         <item itemvalue="JUnit.WQUPCTest" />
-        <item itemvalue="JUnit.UF_HWQUPC_Test.testFind3" />
       </list>
     </recent_temporary>
   </component>
@@ -132,6 +129,7 @@
       <workItem from="1633588602573" duration="39000" />
       <workItem from="1633588677573" duration="5775000" />
       <workItem from="1633920679112" duration="2954000" />
+      <workItem from="1636560485012" duration="6115000" />
     </task>
     <servers />
   </component>
