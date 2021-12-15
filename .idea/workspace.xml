@@ -31,9 +31,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.PellTest">
     <configuration name="HWQUPC_Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.union_find.HWQUPC_Solution" />
       <module name="INFO-6205" />
@@ -60,15 +63,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UF_client_runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.union_find.UF_client_runner" />
-      <module name="INFO-6205" />
+    <configuration name="BinarySearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="INFO6205-Assignments" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.neu.coe.info6205.union_find.*" />
+          <option name="PATTERN" value="edu.neu.coe.info6205.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205" />
+      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.BinarySearchTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PellTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="INFO6205-Assignments" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.neu.coe.info6205.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205" />
+      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.PellTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -88,28 +108,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WQUPCTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="INFO-6205" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.neu.coe.info6205.union_find.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.neu.coe.info6205.union_find" />
-      <option name="MAIN_CLASS_NAME" value="edu.neu.coe.info6205.union_find.WQUPCTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PellTest" />
+        <item itemvalue="JUnit.BinarySearchTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.HWQUPC_Solution" />
         <item itemvalue="JUnit.UF_HWQUPC_Test" />
-        <item itemvalue="Application.UF_client_runner" />
-        <item itemvalue="JUnit.WQUPCTest" />
       </list>
     </recent_temporary>
   </component>
@@ -130,6 +135,7 @@
       <workItem from="1633588677573" duration="5775000" />
       <workItem from="1633920679112" duration="2954000" />
       <workItem from="1636560485012" duration="6595000" />
+      <workItem from="1639600184864" duration="396000" />
     </task>
     <servers />
   </component>
